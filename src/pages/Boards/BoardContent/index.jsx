@@ -1,9 +1,8 @@
-import React from 'react'
 
 function BoardContent() {
   return (
     <div>
-      
+      BoardContent
     </div>
   )
 }

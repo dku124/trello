@@ -2,7 +2,7 @@ import {
   useColorScheme
 } from '@mui/material/styles'
 import Button from '@mui/material/Button'
-import AppBar from '../../components/AppBar'
+import AppBar from '~/components/AppBar'
 import BoardBar from './BoardBar'
 import BoardContent from './BoardContent'
 
