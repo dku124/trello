@@ -33,14 +33,13 @@ function Workspaces() {
           'aria-labelledby': 'basic-button-workspaces'
         }}
       >
-        {/* <MenuItem onClick={handleClose}>Profile</MenuItem> */}
         <MenuItem onClick={handleClose}>
           <ListItemIcon>
             <ContentCut fontSize="small" />
           </ListItemIcon>
           <ListItemText>Cut</ListItemText>
           <Typography variant="body2" color="text.secondary">
-            ⌘X
+            Ctrl+X
           </Typography>
         </MenuItem>
         <MenuItem onClick={handleClose}>
@@ -49,7 +48,7 @@ function Workspaces() {
           </ListItemIcon>
           <ListItemText>Copy</ListItemText>
           <Typography variant="body2" color="text.secondary">
-            ⌘C
+          Ctrl+C
           </Typography>
         </MenuItem>
         <MenuItem onClick={handleClose}>
@@ -58,7 +57,7 @@ function Workspaces() {
           </ListItemIcon>
           <ListItemText>Paste</ListItemText>
           <Typography variant="body2" color="text.secondary">
-            ⌘V
+          Ctrl+V
           </Typography>
         </MenuItem>
         <Divider />
