@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Box, Button, Divider, ListItemIcon, ListItemText, Menu, MenuItem } from '@mui/material'
 import { Check } from '@mui/icons-material'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 function Recent() {
   const [anchorEl, setAnchorEl] = React.useState(null)
