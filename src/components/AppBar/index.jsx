@@ -9,6 +9,7 @@ import Templates from './Menus/Templates'
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import Profiles from './Menus/Profiles'
+import AddIcon from '@mui/icons-material/Add'
 
 function AppBar() {
   return (
@@ -25,7 +26,7 @@ function AppBar() {
           <Recent/>
           <Starred/>
           <Templates/>
-          <Button variant="outlined">Create</Button>
+          <Button variant="outlined" startIcon={<AddIcon/>}>Create</Button>
         </Box>
 
       </Stack>
