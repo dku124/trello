@@ -12,7 +12,7 @@ import Profiles from './Menus/Profiles'
 
 function AppBar() {
   return (
-    <Box sx={{ width:'100%', height: theme => theme.trello.appBarHeight, display:'flex', alignItems:'center', justifyContent:'space-between', padding:'0 1rem' }}>
+    <Box sx={{ width:'100%', height: theme => theme.trello.appBarHeight, display:'flex', gap:'1rem', alignItems:'center', justifyContent:'space-between', padding:'0 1rem', overflow:'auto' }}>
       <Stack direction='row' alignItems='center' spacing={2}>
         <AppsIcon sx={{ color: 'primary.main' }}/>
         <Stack direction="row" spacing={0.5} alignItems="center">
@@ -20,16 +20,19 @@ function AppBar() {
           <Typography variant='span' sx={{ fontSize:'1.2rem', fontWeight:'700', color: 'primary.main' }}>Trello</Typography>
         </Stack>
 
-        <Workspaces/>
-        <Recent/>
-        <Starred/>
-        <Templates/>
+        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }} >
+          <Workspaces/>
+          <Recent/>
+          <Starred/>
+          <Templates/>
+          <Button variant="outlined">Create</Button>
+        </Box>
 
-        <Button variant="outlined">Create</Button>
       </Stack>
       <Stack direction='row' alignItems='center' spacing={2}>
-        <TextField id="outlined-search" label="Search..." type="search" size='small'/>
-        <ModeSelect/>
+        <TextField id="outlined-search" label="Search..." type="search" size='small' sx={{ minWidth:'150px' }}/>
+
+        <ModeSelect sx={{ minWidth:'150px' }}/>
 
         <Tooltip title="Notification">
           <Badge color="secondary" variant="dot">

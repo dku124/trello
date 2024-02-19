@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Box, Button, Divider, ListItemIcon, ListItemText, Menu, MenuItem, Typography } from '@mui/material'
 import { Cloud, ContentCopy, ContentCut, ContentPaste } from '@mui/icons-material'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 function Workspaces() {
   const [anchorEl, setAnchorEl] = React.useState(null)
@@ -55,7 +55,7 @@ function Workspaces() {
           <ListItemIcon>
             <ContentPaste fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Paste</ListItemText>
+          <ListItemText>Paste</ListItemText> 
           <Typography variant="body2" color="text.secondary">
           Ctrl+V
           </Typography>
