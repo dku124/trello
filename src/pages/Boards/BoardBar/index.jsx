@@ -25,35 +25,39 @@ function BoardBar() {
           sx={CHIP_STYLE}
           icon={<SpaceDashboardIcon />}
           label="Acc Name"
-          onClick={()=>{}}
+          clickable
+          // onClick={()=>{}}
         />
 
         <Chip
           sx={CHIP_STYLE}
           icon={<VpnLockIcon />}
           label="Public/Private"
-          onClick={()=>{}}
+          clickable
+          // onClick={()=>{}}
         />
 
         <Chip
           sx={CHIP_STYLE}
           icon={<AddToDriveIcon />}
           label="Add to Google Drive"
-          onClick={()=>{}}
+          clickable
+          // onClick={()=>{}}
         />
 
         <Chip
           sx={CHIP_STYLE}
           icon={<BoltIcon />}
           label="Autumation"
-          onClick={()=>{}}
+          clickable
+          // onClick={()=>{}}
         />
 
         <Chip
           sx={CHIP_STYLE}
           icon={<FilterListIcon />}
           label="Filters"
-          onClick={()=>{}}
+          // onClick={()=>{}}
         />
       </Stack>
 

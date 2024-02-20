@@ -10,8 +10,8 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import Profiles from './Menus/Profiles'
 import AddIcon from '@mui/icons-material/Add'
-import CloseIcon from '@mui/icons-material/Close';
-import SearchIcon from '@mui/icons-material/Search';
+import CloseIcon from '@mui/icons-material/Close'
+import SearchIcon from '@mui/icons-material/Search'
 import { useState } from 'react'
 
 function AppBar() {
@@ -32,7 +32,7 @@ function AppBar() {
           <Recent/>
           <Starred/>
           <Templates/>
-          <Button sx={{border: 'none', '&:hover':{border:'none'}}} variant="outlined" startIcon={<AddIcon/>}>Create</Button>
+          <Button sx={{ border: 'none', '&:hover':{ border:'none' } }} variant="outlined" startIcon={<AddIcon/>}>Create</Button>
         </Box>
 
       </Stack>
@@ -45,7 +45,7 @@ function AppBar() {
               </InputAdornment>
             ),
             endAdornment: (
-              <CloseIcon fontSize='small' sx={{ color: searchValue ? '#fff' : 'transparent', cursor:'pointer' }} onClick = { (e) => setSearchValue('') } />
+              <CloseIcon fontSize='small' sx={{ color: searchValue ? '#fff' : 'transparent', cursor:'pointer' }} onClick = { () => setSearchValue('') } />
             )
           }}
         />
