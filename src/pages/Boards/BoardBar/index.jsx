@@ -7,9 +7,9 @@ import FilterListIcon from '@mui/icons-material/FilterList'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
 
 const CHIP_STYLE ={
-  color:'primary.main', bgcolor:'white', border:'none', padding:'5px', borderRadius:'6px',
-  '& .MuiSvgIcon-root':{
-    color:'primary.main'
+  color:'#fff', bgcolor:'transparent', border:'none', padding:'5px', borderRadius:'6px',
+  '.MuiSvgIcon-root':{
+    color:'#fff'
   },
   '&:hover':{
     bgcolor:'primary.50'
@@ -18,7 +18,7 @@ const CHIP_STYLE ={
 
 function BoardBar() {
   return (
-    <Box sx={{ width:'100%', height: theme => theme.trello.appBarHeight, display:'flex', gap:'1rem', alignItems:'center', justifyContent:'space-between', padding:'1rem', overflow:'auto', borderTop: '1px solid #00bfa5'}}>
+    <Box sx={{ width:'100%', height: theme => theme.trello.appBarHeight, display:'flex', gap:'1rem', alignItems:'center', justifyContent:'space-between', padding:'1rem', overflow:'auto', borderBottom: '1px solid #00bfa5', bgcolor: theme => theme.palette.mode === 'dark' ? '#34495e' : '#1976d2' }}>
 
       <Stack direction='row' alignItems='center' spacing={2}>
         <Chip
@@ -58,9 +58,10 @@ function BoardBar() {
       </Stack>
 
       <Stack direction='row' alignItems='center' spacing={2}>
-        <Button variant="outlined" startIcon={<PersonAddIcon/>}> Invite</Button>
+        <Button variant="outlined" startIcon={<PersonAddIcon/>} sx={{ color:'white' }}> Invite</Button>
         <AvatarGroup max={3}
           sx={{
+            gap:'10px',
             '& .MuiAvatar-root':{
               width: '30px',
               height: '30px',
