@@ -50,7 +50,7 @@ function AppBar() {
           }}
         />
 
-        <ModeSelect sx={{ minWidth:'120px' }}/>
+        <ModeSelect/>
 
         <Tooltip title="Notification">
           <Badge color="warning" variant="dot">
