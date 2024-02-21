@@ -7,7 +7,7 @@ import FilterListIcon from '@mui/icons-material/FilterList'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
 
 const CHIP_STYLE ={
-  color:'#fff', bgcolor:'transparent', border:'none', padding:'5px', borderRadius:'6px',
+  color:'#fff', bgcolor:'transparent', border:'0', padding:'5px', borderRadius:'6px',
   '.MuiSvgIcon-root':{
     color:'#fff'
   },
@@ -69,7 +69,8 @@ function BoardBar() {
             '& .MuiAvatar-root':{
               width: '30px',
               height: '30px',
-              fontSize: '14px'
+              fontSize: '14px',
+              border:'0'
             }
           }}
         >
