@@ -1,5 +1,5 @@
 import { Badge, Box, Button, InputAdornment, Stack, SvgIcon, TextField, Tooltip, Typography } from '@mui/material'
-import ModeSelect from '../ModeSelect'
+import ModeSelect from '../ModeSelect/ModeSelect'
 import AppsIcon from '@mui/icons-material/Apps'
 import TrelloIcon from '../../assets/trello.svg?react'
 import Workspaces from './Menus/Workspaces'
