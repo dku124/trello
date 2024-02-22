@@ -1,6 +1,7 @@
 
 import { Stack } from "@mui/material"
-import Card from "./Card/Card"
+import Card from "./Card/CardTrel"
+import CardTrel from "./Card/CardTrel"
 
 
 function ListCard() {
@@ -21,15 +22,8 @@ function ListCard() {
         backgroundColor: '#bfc2cf'
       }
     }}>
-      <Card/>
-      <Card hideMedia/>
-      {/* <Card sx={{ width: '100%', cursor:'pointer', boxShadow: '0 1px 1px rgba(0, 0, 0, 0.2)' }}>
-        <CardContent sx={{ p: 1.5, '&:last-child': { p:1.5 } }}>
-          <Typography>
-            Lizard
-          </Typography>
-        </CardContent>
-      </Card> */}
+      <CardTrel/>
+      <CardTrel hideMedia/>
     </Stack>
   )
 }

@@ -1,9 +1,9 @@
-import { Button, CardActions, CardContent, CardMedia, Typography } from "@mui/material"
+import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material"
 import GroupIcon from '@mui/icons-material/Group'
 import ModeCommentIcon from '@mui/icons-material/ModeComment'
 import AttachmentIcon from '@mui/icons-material/Attachment'
 
-function Card({ hideMedia }) {
+function CardTrel({ hideMedia }) {
   if (hideMedia) {
     return (
       <Card sx={{ width: '100%', cursor:'pointer', boxShadow: '0 1px 1px rgba(0, 0, 0, 0.2)' }}>
@@ -36,4 +36,4 @@ function Card({ hideMedia }) {
   )
 }
 
-export default Card
+export default CardTrel
