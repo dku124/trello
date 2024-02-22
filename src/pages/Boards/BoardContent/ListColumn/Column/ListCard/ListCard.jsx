@@ -7,7 +7,7 @@ import { Button, Card, CardActions, CardContent, CardMedia, Stack, Typography } 
 function ListCard() {
 
   return (
-    <Stack sx={{p:' 5px', m:'0 5px', gap: 1, overflowX: 'hidden', overflowY: 'auto',
+    <Stack sx={{ p:'5px', m:'0 5px', gap: 1, overflowX: 'hidden', overflowY: 'auto',
       maxHeight: theme => `calc(
         ${theme.trello.boardContentHeight}
       - ${theme.spacing(4)}
