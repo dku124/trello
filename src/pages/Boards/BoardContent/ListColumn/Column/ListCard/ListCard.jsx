@@ -1,6 +1,5 @@
 
 import { Stack } from "@mui/material"
-import Card from "./Card/CardTrel"
 import CardTrel from "./Card/CardTrel"
 
 
