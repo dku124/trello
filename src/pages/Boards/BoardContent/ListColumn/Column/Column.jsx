@@ -30,7 +30,7 @@ function Column() {
     }}>
 
       <Box sx={{
-        height: theme.trello.columnHeaderHeight,
+        height: theme => theme.trello.columnHeaderHeight,
         p: 2,
         display: 'flex',
         alignItems: 'center',
@@ -89,7 +89,7 @@ function Column() {
       <ListCard/>
 
       <Box sx={{
-        height: theme.trello.columnFooterHeightL,
+        height: theme => theme.trello.columnFooterHeightL,
         p: 2,
         display: 'flex',
         alignItems: 'center',

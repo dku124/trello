@@ -87,7 +87,7 @@ const theme = extendTheme({
     MuiTypography:{
       styleOverrides:{
         root:{
-          '&.MuiTypography-body1':{ fontSize:'0.875rem'}
+          '&.MuiTypography-body1':{ fontSize:'0.875rem' }
         }
       }
     }
