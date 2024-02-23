@@ -3,7 +3,7 @@ import { Stack } from "@mui/material"
 import CardTrel from "./Card/CardTrel"
 
 
-function ListCard() {
+function ListCard({ cards }) {
 
   return (
     <Stack sx={{ p:'5px', m:'0 5px', gap: 1, overflowX: 'hidden', overflowY: 'auto',
@@ -21,8 +21,12 @@ function ListCard() {
         backgroundColor: '#bfc2cf'
       }
     }}>
-      <CardTrel/>
-      <CardTrel hideMedia/>
+
+      {cards?.map( card => (
+        <CardTrel key={ card._id } card={card}/>
+      ))}
+      {/* <CardTrel/> */}
+
     </Stack>
   )
 }
