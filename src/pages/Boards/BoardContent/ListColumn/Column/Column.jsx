@@ -6,9 +6,10 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
 import AddCardIcon from '@mui/icons-material/AddCard'
 import DragHandleIcon from '@mui/icons-material/DragHandle'
 import ListCard from "./ListCard/ListCard"
+import { mapOrder } from "../../../../../utils/sorts"
 
 
-function Column() {
+function Column({ column }) {
   const [anchorEl, setAnchorEl] = useState(null)
   const open = Boolean(anchorEl)
   const handleClick = (event) => {
@@ -17,6 +18,8 @@ function Column() {
   const handleClose = () => {
     setAnchorEl(null)
   }
+
+  const orderedCards = mapOrder(column?.cards, column?.cardOrderIds, '_id')
 
   return (
     <Box sx={{
@@ -36,7 +39,7 @@ function Column() {
         alignItems: 'center',
         justifyContent: 'space-between'
       }}>
-        <Typography variant="h6" sx={{fontWeight:'700', cursor:'pointer', fontSize:'1rem'}}>Column Title</Typography>
+        <Typography variant="h6" sx={{ fontWeight:'700', cursor:'pointer', fontSize:'1rem' }}>{column?.title}</Typography>
         <Box>
           <Tooltip title='More'>
             <ExpandMoreIcon sx={{ color:'text.primary', cursor:'pointer' }}
@@ -86,7 +89,8 @@ function Column() {
       </Box>
 
       {/* List card */}
-      <ListCard/>
+      {/* <ListCard cards={column?.cards}/> */}
+      <ListCard cards={orderedCards}/>
 
       <Box sx={{
         height: theme => theme.trello.columnFooterHeightL,
@@ -97,7 +101,7 @@ function Column() {
       }}>
         <Button startIcon={<AddCardIcon/>}>Add new Card</Button>
         <Tooltip title='Drag to move'>
-          <DragHandleIcon sx={{cursor:'pointer'}}/>
+          <DragHandleIcon sx={{ cursor:'pointer' }}/>
         </Tooltip>
       </Box>
     </Box>

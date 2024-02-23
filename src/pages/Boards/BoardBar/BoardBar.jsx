@@ -5,6 +5,7 @@ import AddToDriveIcon from '@mui/icons-material/AddToDrive'
 import BoltIcon from '@mui/icons-material/Bolt'
 import FilterListIcon from '@mui/icons-material/FilterList'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
+import { capitalizeFirstLetter } from "../../../utils/formatLetter"
 
 const CHIP_STYLE ={
   color:'#fff', bgcolor:'transparent', border:'0', padding:'5px', borderRadius:'6px',
@@ -16,7 +17,7 @@ const CHIP_STYLE ={
   }
 }
 
-function BoardBar() {
+function BoardBar({ board }) {
   return (
     <Box sx={{ width:'100%', height: theme => theme.trello.appBarHeight, display:'flex', gap:'1rem', alignItems:'center', justifyContent:'space-between', padding:'1rem', overflow:'auto', borderBottom: '1px solid #00bfa5', bgcolor: theme => theme.palette.mode === 'dark' ? '#34495e' : '#1976d2' }}>
 
@@ -24,7 +25,7 @@ function BoardBar() {
         <Chip
           sx={CHIP_STYLE}
           icon={<SpaceDashboardIcon />}
-          label="Acc Name"
+          label={board.title}
           clickable
           // onClick={()=>{}}
         />
@@ -32,7 +33,7 @@ function BoardBar() {
         <Chip
           sx={CHIP_STYLE}
           icon={<VpnLockIcon />}
-          label="Public/Private"
+          label={capitalizeFirstLetter(board.type)}
           clickable
           // onClick={()=>{}}
         />
